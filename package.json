@@ -1,0 +1,22 @@
+{
+  "name": "nextjsmultizone",
+  "version": "1.0.0",
+  "description": "NextJs to deploy multizone apps on production ",
+  "keywords": [
+    "NextJs",
+    "multizone"
+  ],
+  "author": "Nitish Mallick",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "license": "ISC",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=root-app\" \"npm run dev --workspace=customer-app\""
+  },
+
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
+}
